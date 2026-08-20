@@ -1,0 +1,169 @@
+/* AboutSection Styles */
+.about-section {
+  background: var(--bg-primary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+/* Content */
+.about-content {
+  max-width: 560px;
+}
+
+.about-text {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.about-point {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+.about-point-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(197, 168, 128, 0.14);
+  color: var(--secondary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+[data-theme="dark"] .about-point-icon {
+  background: rgba(245, 158, 11, 0.18);
+  color: #FBBF24;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+/* Image column */
+.about-img-wrap {
+  position: relative;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+}
+
+.about-img-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-img-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+.about-img {
+  width: 100%;
+  aspect-ratio: 4/4.6;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlapping interior image */
+.about-img-overlay-frame {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 46%;
+  aspect-ratio: 4/4.4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 6px solid var(--bg-primary);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+
+.about-img-overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Experience badge */
+.about-exp-badge {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.25rem;
+  background: linear-gradient(135deg, var(--secondary-dark), var(--secondary));
+  color: var(--primary-dark);
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 3;
+}
+
+.exp-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.exp-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .about-img-wrap {
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+  }
+
+  .about-img-overlay-frame {
+    width: 52%;
+  }
+
+  .about-exp-badge {
+    top: 1rem;
+    right: 0.75rem;
+    padding: 0.9rem 1.1rem;
+  }
+
+  .exp-number {
+    font-size: 1.6rem;
+  }
+}

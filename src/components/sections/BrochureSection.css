@@ -1,0 +1,149 @@
+/* BrochureSection Styles */
+.brochure-section {
+  background: linear-gradient(160deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  padding: 5rem 0;
+}
+
+.brochure-card {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.brochure-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+}
+
+@media (max-width: 960px) {
+  .brochure-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+.brochure-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+  margin-bottom: 1rem;
+}
+
+.brochure-title {
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  color: var(--primary-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.brochure-lead {
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
+.brochure-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.brochure-points li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.brochure-points svg {
+  color: var(--secondary-dark);
+  flex-shrink: 0;
+}
+
+/* Form */
+.brochure-form-panel {
+  display: flex;
+  align-items: center;
+}
+
+.brochure-form {
+  width: 100%;
+}
+
+.brochure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.875rem;
+}
+
+.brochure-note svg {
+  color: var(--secondary-dark);
+}
+
+/* Success state */
+.brochure-success {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.brochure-success-icon {
+  color: var(--success);
+}
+
+.brochure-success h3 {
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  font-family: var(--font-heading);
+}
+
+.brochure-success p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  max-width: 380px;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.brochure-again {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.brochure-again:hover {
+  color: var(--primary);
+}

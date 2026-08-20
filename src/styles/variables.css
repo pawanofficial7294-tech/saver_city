@@ -1,0 +1,80 @@
+/* Variables definition for Savera City Design System */
+:root {
+  /* Brand Colors */
+  --primary: #0F4C43;        /* Deep Emerald Green */
+  --primary-light: #166e61;  /* Lighter Emerald */
+  --primary-dark: #092e29;   /* Darker Emerald */
+  --secondary: #D97706;      /* Rich Luxury Gold */
+  --secondary-light: #F59E0B;/* Light Gold */
+  --secondary-dark: #B45309; /* Deep gold / Bronze */
+  
+  /* Text and BG Colors - Light Mode Default */
+  --text-dark: #0F172A;      /* Slate 900 - maximum contrast */
+  --text-muted: #334155;     /* Slate 700 - high contrast descriptions */
+  --text-light: #F8FAFC;     /* Slate 50 - text on dark backgrounds */
+  --text-heading: #092E29;   /* Deep emerald heading in light mode */
+  
+  --bg-primary: #FFFFFF;     /* Pure white */
+  --bg-secondary: #F1F5F9;   /* Slate 100 section alternate */
+  --bg-card: #FFFFFF;        /* Card surface */
+  --bg-dark: #0B1E1C;        /* Dark background (for header/footer/hero) */
+  --bg-dark-card: #122c29;   /* Card backgrounds inside dark sections */
+  
+  /* Feedback Colors */
+  --success: #10B981;        /* Emerald 500 */
+  --error: #EF4444;          /* Red 500 */
+  --warning: #F59E0B;        /* Amber 500 */
+  --info: #3B82F6;           /* Blue 500 */
+  
+  /* Layout Constants */
+  --header-height: 80px;
+  --header-height-sticky: 70px;
+  --max-width: 1280px;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(15, 76, 67, 0.06);
+  --shadow-md: 0 10px 20px rgba(15, 76, 67, 0.08);
+  --shadow-lg: 0 20px 40px rgba(15, 76, 67, 0.12);
+  --shadow-hover: 0 25px 50px rgba(15, 76, 67, 0.18);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --border-color: #CBD5E1;    /* Slate 300 - clearly visible borders */
+  --border-color-dark: #1E3E3A; /* Dark green-slate for dark components */
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg-primary: #061513;     /* Rich deep emerald black */
+  --bg-secondary: #0B221F;   /* Slightly lighter dark background */
+  --bg-card: #102B27;        /* Dark card surface */
+  --bg-dark: #030B0A;
+  --bg-dark-card: #081B18;
+
+  --text-dark: #F8FAFC;      /* Ultra crisp white for primary text */
+  --text-muted: #CBD5E1;     /* Slate 300 for readable secondary text */
+  --text-light: #FFFFFF;
+  --text-heading: #FFFFFF;   /* Pure white headings in dark mode */
+
+  --border-color: #1A423C;    /* Subtle emerald border */
+  --border-color-dark: #265952;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+

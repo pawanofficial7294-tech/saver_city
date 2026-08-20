@@ -1,0 +1,178 @@
+/* Paper Brochure Style Plot Area & Size Chart */
+.plot-paper-chart-card {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 3px solid #1E293B;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  font-family: 'Outfit', 'Montserrat', sans-serif;
+}
+
+.plot-paper-header {
+  background: linear-gradient(180deg, #FACC15 0%, #EAB308 100%);
+  border-bottom: 2px solid #1E293B;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.rate-badge-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.rate-badge-old {
+  background: rgba(0, 0, 0, 0.25);
+  color: #F87171;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+}
+
+.rate-badge-discount {
+  background: #DC2626;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.rate-badge-primary {
+  background: #15803D;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 0.82rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 14px;
+}
+
+.rate-badge-secondary {
+  background: #9333EA;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 0.82rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 14px;
+}
+
+.location-road-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1E293B;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+}
+
+.plot-paper-title {
+  color: #854D0E;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.plot-paper-sub {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #713F12;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.15rem;
+}
+
+.plot-paper-rows {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+
+.plot-paper-row {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 2px solid #E2E8F0;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  gap: 1.25rem;
+}
+
+.plot-paper-row:last-child {
+  border-bottom: none;
+}
+
+.plot-paper-row:hover {
+  background: #FEF9C3;
+  transform: translateX(4px);
+}
+
+.plot-paper-row.active-paper-row {
+  background: #FEF08A;
+  border-left: 6px solid #854D0E;
+}
+
+/* Badge square box resembling SA, SB, SC, SD, SE, SF */
+.plot-code-badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.plot-paper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.plot-paper-dim {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1E293B;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.plot-paper-sqft {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #0F172A;
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+.plot-paper-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  background: #F1F5F9;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  white-space: nowrap;
+}

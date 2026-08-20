@@ -1,0 +1,384 @@
+.plot-calculator-section {
+  padding: 4.5rem 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-normal);
+}
+
+.plot-calc-header {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.plot-calc-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.plot-calc-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.plot-chart-and-calc-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .plot-chart-and-calc-grid {
+    grid-template-columns: 1fr;
+  }
+  .paper-chart-col {
+    max-width: 440px;
+    margin: 0 auto 1.5rem;
+    width: 100%;
+  }
+}
+
+.plot-size-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .plot-size-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.plot-size-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.plot-size-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.plot-size-card.active {
+  border-color: var(--primary);
+  background: rgba(15, 76, 67, 0.08);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .plot-size-card.active {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10B981;
+}
+
+.plot-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plot-sqft {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.plot-sqft small {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.plot-check {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .plot-check {
+  color: #10B981;
+}
+
+.plot-code-badge-sm {
+  display: inline-block;
+  background: var(--primary-dark);
+  color: #FACC15;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  width: fit-content;
+}
+
+.plot-dim-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-top: 0.25rem;
+}
+
+[data-theme="dark"] .plot-dim-text {
+  color: #6EE7B7;
+}
+
+/* Display Box */
+.plot-detail-display {
+  background: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.plot-detail-main {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+@media (max-width: 900px) {
+  .plot-detail-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plot-visual-box {
+  background: #0B2519;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plot-blueprint {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 240px;
+}
+
+.plot-blueprint-border {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #52B788;
+  background: rgba(82, 183, 136, 0.06);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.plot-code-overlay-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #FACC15;
+  color: #854D0E;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #713F12;
+}
+
+.plot-dim-label {
+  position: absolute;
+  background: #1B4332;
+  color: #74C69D;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.plot-dim-label.top {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.plot-dim-label.right {
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.plot-blueprint-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.blueprint-icon {
+  color: #74C69D;
+  margin-bottom: 0.5rem;
+}
+
+.blueprint-sqft {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.blueprint-sqyd {
+  font-size: 0.82rem;
+  color: #A7F3D0;
+}
+
+.plot-road-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #334155;
+  color: #F8FAFC;
+  font-size: 0.68rem;
+  text-align: center;
+  padding: 0.3rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.plot-specs-box {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plot-specs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.plot-specs-header h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.plot-price-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+[data-theme="dark"] .plot-price-badge {
+  color: #34D399;
+}
+
+.plot-spec-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-bottom: 1.5px dashed var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.spec-label {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.spec-val {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.highlight-val {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .highlight-val {
+  color: #4ADE80;
+}
+
+.plot-highlights {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.plot-highlights h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.plot-highlights ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 640px) {
+  .plot-highlights ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plot-highlights li {
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.list-check {
+  color: #16A34A;
+  flex-shrink: 0;
+}
+
+.plot-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}

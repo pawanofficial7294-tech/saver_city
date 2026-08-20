@@ -1,0 +1,97 @@
+/* SectionTitle Component Styles */
+.section-title {
+  margin-bottom: 3rem;
+}
+
+.section-title-center {
+  text-align: center;
+}
+
+.section-title-right {
+  text-align: right;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-body);
+}
+
+.section-heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.section-title-center .section-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Decorative Divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.section-title-center .section-divider {
+  justify-content: center;
+}
+
+.section-title-right .section-divider {
+  justify-content: flex-end;
+}
+
+.divider-line {
+  height: 2px;
+  width: 50px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.divider-line-short {
+  width: 20px;
+  background-color: var(--secondary);
+}
+
+.divider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/* Light variant (for dark backgrounds) */
+.section-title-light .section-heading {
+  color: var(--text-light);
+}
+
+.section-title-light .section-description {
+  color: rgba(248, 250, 252, 0.75);
+}
+
+.section-title-light .divider-line {
+  background-color: var(--secondary);
+}
+
+.section-title-light .section-subtitle {
+  color: var(--secondary-light);
+}

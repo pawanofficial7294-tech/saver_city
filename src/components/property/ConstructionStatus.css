@@ -1,0 +1,123 @@
+/* ConstructionStatus Styles */
+.construction-progress-section {
+  margin-bottom: 2rem;
+}
+
+.construction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+
+.construction-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+}
+
+.construction-percent {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.construction-progress-track {
+  height: 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.construction-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+.construction-phase {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+.construction-phase strong {
+  color: var(--text-dark);
+}
+
+/* Timeline */
+.construction-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.timeline-icon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 0.125rem;
+}
+
+.timeline-connector {
+  width: 2px;
+  flex: 1;
+  min-height: 28px;
+  background: var(--border-color);
+  margin: 0.25rem 0;
+}
+
+.timeline-icon-completed { color: var(--success); }
+.timeline-icon-progress { color: var(--secondary-dark); }
+.timeline-icon-upcoming { color: var(--text-muted); }
+
+.timeline-content {
+  padding-bottom: 1.5rem;
+  flex: 1;
+}
+
+.timeline-phase {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.15rem 0 0.4rem;
+}
+
+.timeline-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-badge-completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.timeline-badge-in-progress {
+  background: rgba(197, 168, 128, 0.15);
+  color: var(--secondary-dark);
+}
+
+.timeline-badge-upcoming {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+}

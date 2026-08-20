@@ -1,0 +1,90 @@
+/* Property Search Section */
+.search-section {
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 0;
+}
+
+.search-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hover);
+  padding: 2rem 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.search-title {
+  font-size: 1.3rem;
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+@media (max-width: 1100px) {
+  .search-controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search-btn-wrap {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .search-card { padding: 1.5rem; }
+  .search-controls {
+    grid-template-columns: 1fr;
+  }
+  .search-btn-wrap { grid-column: 1; }
+}
+
+.search-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.search-select-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.search-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.search-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.search-btn-wrap {
+  min-width: 160px;
+}

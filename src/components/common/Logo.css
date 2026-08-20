@@ -1,0 +1,109 @@
+.savera-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.savera-logo:hover {
+  transform: translateY(-1px);
+}
+
+.savera-logo-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.savera-logo-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Sizing */
+.savera-logo-small .savera-logo-graphic {
+  width: 44px;
+  height: 32px;
+}
+
+.savera-logo-medium .savera-logo-graphic {
+  width: 58px;
+  height: 42px;
+}
+
+.savera-logo-large .savera-logo-graphic {
+  width: 84px;
+  height: 60px;
+}
+
+.savera-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.savera-logo-title {
+  font-family: 'Outfit', 'Montserrat', 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #113824;
+}
+
+.savera-logo-small .savera-logo-title {
+  font-size: 1.15rem;
+}
+
+.savera-logo-medium .savera-logo-title {
+  font-size: 1.4rem;
+}
+
+.savera-logo-large .savera-logo-title {
+  font-size: 2rem;
+}
+
+.savera-logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2D6A4F;
+  margin-top: 2px;
+}
+
+.savera-logo-small .savera-logo-tagline {
+  font-size: 0.55rem;
+}
+
+.savera-logo-medium .savera-logo-tagline {
+  font-size: 0.65rem;
+}
+
+.savera-logo-large .savera-logo-tagline {
+  font-size: 0.85rem;
+}
+
+/* Light variant for dark backgrounds */
+.savera-logo-light .savera-logo-title {
+  color: #FFFFFF;
+}
+
+.savera-logo-light .savera-logo-tagline {
+  color: #74C69D;
+}
+
+/* Stacked variant */
+.savera-logo-stacked {
+  flex-direction: column;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.savera-logo-stacked .savera-logo-graphic {
+  width: 120px;
+  height: 80px;
+}
